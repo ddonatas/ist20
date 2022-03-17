@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +27,8 @@ Route::resource('/books', BookController::class);
 Route::resource('/products', ProductController::class);
 
 require __DIR__.'/auth.php';
+
+//laišku siuntimas
+//Route::get('/mail',MailController::class);
+Route::get('mail', [MailController::class, 'plain_email']);
+Route::get('mail_html', [MailController::class, 'html_email']);
