@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+//soft delete 
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
@@ -12,5 +13,6 @@ class Product extends Model
     protected $fillable = [
         'name', 'detail'
     ];
- //   use SoftDeletes;
+    //"netikras" šalinimas
+   use SoftDeletes;
 }
