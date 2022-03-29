@@ -15,7 +15,16 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                </div>
+
+                    <x-nav-link :href="route('products_list')" :active="request()->routeIs('products_list')">
+                        {{ __('Products') }}
+                    </x-nav-link>
+                    @if(Auth::user()->isAdmin())
+                    <x-nav-link :href="route('products.index')" :active="request()->routeIs('products')">
+                        {{ __('Products(admin)') }}
+                    </x-nav-link>
+                    @endif
+                    </div>   
             </div>
 
             <!-- Settings Dropdown -->

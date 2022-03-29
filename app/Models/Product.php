@@ -15,4 +15,5 @@ class Product extends Model
     ];
     //"netikras" šalinimas
    use SoftDeletes;
+   
 }

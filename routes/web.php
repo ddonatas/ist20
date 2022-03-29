@@ -26,6 +26,10 @@ Route::get('/dashboard', function () {
 
 Route::resource('/books', BookController::class);
 
+
+//leidziama tik prisijungusiam
+Route::get('products_list',  [ProductController::class, 'index'])->middleware(['auth'])->name('products_list');
+//leidziama tik admin
 //Route::middleware(['AdminAccess'])->group(function () {
     Route::resource('/products', ProductController::class)->middleware(['AdminAccess']);
 //});
