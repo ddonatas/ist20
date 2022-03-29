@@ -14,10 +14,15 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->paginate(3);
-    
+       // $products = Product::where('name', 'asb')->get();
+        $products = Product::latest()->orderBy('name', 'asc')->paginate(3);
+      // $products =$products->only([1, 2, 3]);
+      
         return view('products.index',compact('products'))
-            ->with('i', (request()->input('page', 1) - 1) * 3);
+           ->with('i',(request()->input('page', 1) - 1) * 3);
+
+           /*return view('products.index',compact('products'))
+           ->with('i', (request()->input('page', 1) - 1) * 10);*/
     }
 
     /**
