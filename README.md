@@ -13,6 +13,7 @@ norint pilnai paleisti  projektą reikia atsisiųsti arba  naudoti git (https://
 1. migracija ir seed su factories (book, dog, veisle)
 2. standartinė autorizacija Breeze
 3. duomenų išvedimas /books 
-4. duomenų valdymas CRUD /products
-5. SoftDelete
-6. Autorizacija pagal vartotojo tipą (isAdmin)
+4. vertimas į kitas kalbas
+5. duomenų valdymas CRUD /products
+6. SoftDelete, puslapiavimas
+7. Autorizacija pagal vartotojo tipą (isAdmin)
