@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\FileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,7 @@ require __DIR__.'/auth.php';
 //Route::get('/mail',MailController::class);
 Route::get('mail', [MailController::class, 'plain_email']);
 Route::get('mail_html', [MailController::class, 'html_email']);
+
+
+Route::get('file', [FileController::class, 'create']); 
+Route::post('file', [FileController::class, 'store']);
