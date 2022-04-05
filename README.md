@@ -17,3 +17,7 @@ norint pilnai paleisti  projektą reikia atsisiųsti arba  naudoti git (https://
 5. duomenų valdymas CRUD /products
 6. SoftDelete, puslapiavimas
 7. Autorizacija pagal vartotojo tipą (isAdmin)
+8. Bylos įkelimas ir įrašymas bylos pavadinimų į DB
+9. Paiešką <i> product </i> CRUD'e
+10. Cities (miestu) lentele + Seed'as.  Po migracijos : <i> php artisan db:seed --class CitiesSeeder </i>
+11. panaudotas dvieju lenteliu sujungimas Join kontroleryje 

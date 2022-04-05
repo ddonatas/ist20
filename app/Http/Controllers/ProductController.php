@@ -15,14 +15,17 @@ class ProductController extends Controller
     public function index()
     {
        // $products = Product::where('name', 'asb')->get();
-        $products = Product::latest()->orderBy('name', 'asc')->paginate(3);
+        $products = Product::latest('products.created_at')   //kadangi jungiasi dvi lenteles, abi turi lauka , pagal kuri isrenkami 'Latest', reikia nurodyti, kurios lenteles naudoti
+                    ->leftJoin('cities', 'products.citiesID', '=', 'cities.id')         
+                    ->select ('products.id', 'products.name','products.detail', 'cities.city') //nebutina select
+                    ->where('name', 'Like', '%' . request('term') . '%')
+                    ->orderBy('name', 'asc')->paginate(3);
       // $products =$products->only([1, 2, 3]);
       
         return view('products.index',compact('products'))
            ->with('i',(request()->input('page', 1) - 1) * 3);
 
-           /*return view('products.index',compact('products'))
-           ->with('i', (request()->input('page', 1) - 1) * 10);*/
+          
     }
 
     /**
