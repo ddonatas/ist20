@@ -8,6 +8,7 @@ norint pilnai paleisti  projektą reikia atsisiųsti arba  naudoti git (https://
 7. sukurti DB pvz IST20_test
 8. sukonfogūruoti .env DB prisijungimo duomenis  (db, user, pass)
 9. php artisan migrate
+10. toliau žiūrėti nuo 5 paskaitos
 
 <b>IST20 sudaro kelių paskaitų dalys:</b>
 1. migracija ir seed su factories (book, dog, veisle)
@@ -21,3 +22,4 @@ norint pilnai paleisti  projektą reikia atsisiųsti arba  naudoti git (https://
 9. Paiešką <i> product </i> CRUD'e
 10. Cities (miestu) lentele + Seed'as.  Po migracijos : <i> php artisan db:seed --class CitiesSeeder </i>
 11. panaudotas dvieju lenteliu sujungimas Join kontroleryje 
+12. PDF generavimas. Reikalingas PDF generatorius paketas <i> composer require barryvdh/laravel-dompdf </i>

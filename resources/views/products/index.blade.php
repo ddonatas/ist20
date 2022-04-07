@@ -14,6 +14,7 @@
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
+                <a class="btn btn-info" href="{{ url('pdf') }}"> PDF </a>
             </div>
         </div>
     </div>
@@ -24,17 +25,19 @@
                 <form action="{{ route('products.index') }}" method="GET" role="search">
                     <div class="form-group col-5 col-md-6 ">
                     <input type="text" class="form-control form-control-sm" name="term" placeholder="ieškok" id="term">
-                    <a href="{{ route('products.index') }}" > 
-                </div>  
+                        <a href="{{ route('products.index') }}" >  
+                            </div>  
 
-                <div class="form-group col-5 col-md-1 ">  
-                    <button class="btn btn-info" type="submit">Rasti</button>
-                </div> 
+                            <div class="form-group col-5 col-md-1 ">  
+                                <button class="btn btn-info" type="submit">Rasti</button>
+                            </div> 
 
-                <div class="form-group col-5 col-md-1">
-                    <button  class="btn btn-danger" type="button">Rodyti viską</button>
-                
-                </div>            
+                            <div class="form-group col-5 col-md-1">
+                                <button  class="btn btn-danger" type="button">Rodyti viską</button>
+                      
+                            </div>   
+                        </a>
+                </form>         
         </div>                
     </div>
     

@@ -5,6 +5,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\PdfController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +46,5 @@ Route::get('mail_html', [MailController::class, 'html_email']);
 
 Route::get('file', [FileController::class, 'create']); 
 Route::post('file', [FileController::class, 'store']);
+
+Route::get('pdf', [PdfController::class, 'index']);
